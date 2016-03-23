@@ -1,0 +1,22 @@
+<%= form_for(@dog) do |t| %>
+
+    <div>
+      <%= t.label :dogname %><br>
+      <%= t.text_field :dogname %>
+    </div>
+
+    <div>
+      <%= t.label :owner %><br>
+      <%= t.text_area :owner %>
+    </div>
+
+    <div>
+      <%= t.label :age %><br>
+      <%= t.text_area :age %>
+    </div>
+
+    <div class="actions">
+      <%= t.submit %>
+    </div>
+
+<%end%>
