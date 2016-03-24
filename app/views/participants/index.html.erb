@@ -1,0 +1,27 @@
+<h1>participants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <td class="td"> dog name </td>
+      <td class="td"> owner </td>
+      <td class="td"> age </td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @participants.each do |participant| %>
+      <tr>
+        <td><%= participant.dog_name %></td>
+        <td><%= participant.owner %></td>
+        <td><%= participant.age %></td>
+        <td class="actions"><%= link_to 'Show', "/participants/#{participant.id}" %></td>
+        <td class="actions"><%= link_to 'Edit', edit_participant_path(participant) %></td>
+        <td class="actions"><%= link_to 'Destroy', participant_path(participant), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    <td class="new"><%= link_to 'New participant', new_participant_path %></td>
+  </tbody>
+
+</table>
+

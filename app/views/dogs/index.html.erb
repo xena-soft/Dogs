@@ -1,4 +1,4 @@
-<h1>Dogs</h1>
+<h1>participants</h1>
 
 <table>
   <thead>
@@ -10,18 +10,18 @@
   </thead>
 
   <tbody>
-  <% @dogs.each do |dog| %>
+  <% @participants.each do |participant| %>
       <tr>
-        <td><%= dog.dogname %></td>
-        <td><%= dog.owner %></td>
-        <td><%= dog.age %></td>
-        <td><%= link_to 'Show', "/dogs/#{dog.id}" %></td>
-        <td><%= link_to 'Edit', edit_dog_path(dog) %></td>
-        <td><%= link_to 'Destroy', dog_path(dog), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= participant.participantname %></td>
+        <td><%= participant.owner %></td>
+        <td><%= participant.age %></td>
+        <td><%= link_to 'Show', "/participants/#{participant.id}" %></td>
+        <td><%= link_to 'Edit', edit_participant_path(participant) %></td>
+        <td><%= link_to 'Destroy', participant_path(participant), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
   <% end %>
   </tbody>
 
 </table>
 
-<%= link_to 'New Dog', new_dog_path %>
+<%= link_to 'New participant', new_participant_path %>
